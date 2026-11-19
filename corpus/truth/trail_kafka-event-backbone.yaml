@@ -1,0 +1,30 @@
+id: kafka-event-backbone
+question: why did we choose Kafka?
+topic: the event backbone
+decision_name: Kafka (MSK)
+decision: Kafka (MSK) as the event backbone
+proposed_by: Priya Nair
+participants: [Priya Nair, Daniel Cho, Wei Lin, Ana Petrova]
+alternatives:
+  - name: Kinesis
+    rejected_because: the consumer-group limit is too low for the fan-out we're projecting
+  - name: RabbitMQ
+    rejected_because: there's no replay, and the backfill requirement kills it
+  - name: SQS
+    rejected_because: ordering problems, dropped in the same meeting
+assumptions:
+  - claim: Kinesis caps at five consumers per shard
+    stated_by: Wei Lin
+    kind: capability
+    checkable: true
+    how_to_check: check current Kinesis consumer-group limits
+  - claim: we'll have two platform engineers on this through Q3
+    stated_by: Priya Nair
+    kind: org
+    checkable: true
+    how_to_check: check current platform team staffing
+exploratory_date: 2025-03-05
+decision_date: 2025-03-19
+revision:
+  date: 2025-06-04
+  text: Let's narrow scope to the orders topic only for now. The user-events migration is parked until we have headcount.

@@ -1,0 +1,28 @@
+id: ci-runner-migration
+question: why did we move off Jenkins?
+topic: the CI runner
+decision_name: GitHub Actions
+decision: GitHub Actions as the CI runner
+proposed_by: Sofia Torres
+participants: [Sofia Torres, Jon Baptiste, Marcus Webb, Nadia Ibrahim]
+alternatives:
+  - name: CircleCI
+    rejected_because: the per-minute pricing was worse than our Jenkins box once we modeled actual usage
+  - name: staying on Jenkins
+    rejected_because: nobody left on the team wants to own the Groovy pipeline code
+assumptions:
+  - claim: GitHub Actions minutes stay free for our usage volume under the team plan
+    stated_by: Jon Baptiste
+    kind: cost
+    checkable: true
+    how_to_check: check current GitHub Actions billing for private repos
+  - claim: we will not need self-hosted runners for at least a year
+    stated_by: Sofia Torres
+    kind: forecast
+    checkable: true
+    how_to_check: check current build-minute usage trend
+exploratory_date: 2025-05-07
+decision_date: 2025-05-21
+revision:
+  date: 2025-08-13
+  text: We do need self-hosted runners after all, just for the GPU test suite. Everything else stays on hosted runners.

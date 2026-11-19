@@ -1,0 +1,26 @@
+id: feature-flag-provider
+question: why did we pick LaunchDarkly for feature flags?
+topic: feature flags
+decision_name: LaunchDarkly
+decision: LaunchDarkly as the feature-flag provider
+proposed_by: Omar Siddiqui
+participants: [Omar Siddiqui, Grace Kim, Leila Haddad, Victor Nguyen]
+alternatives:
+  - name: homegrown flags
+    rejected_because: it would take a quarter to build the targeting rules Product actually needs
+  - name: Unleash self-hosted
+    rejected_because: nobody wants to run another stateful service just for this
+assumptions:
+  - claim: LaunchDarkly's per-seat pricing stays flat through next year
+    stated_by: Grace Kim
+    kind: cost
+    checkable: true
+    how_to_check: check current LaunchDarkly pricing tiers
+  - claim: we'll only need percentage rollouts and user targeting, nothing more exotic
+    stated_by: Omar Siddiqui
+    kind: forecast
+    checkable: true
+    how_to_check: review current flag usage patterns
+exploratory_date: 2025-04-02
+decision_date: 2025-04-16
+revision: null

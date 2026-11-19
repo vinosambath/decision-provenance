@@ -1,0 +1,45 @@
+name: Northwind Labs
+product: an order-fulfillment platform for mid-size e-commerce brands
+people:
+  - name: Priya Nair
+    role: Staff Engineer
+    team: Platform
+  - name: Daniel Cho
+    role: Senior Engineer
+    team: Platform
+  - name: Wei Lin
+    role: Senior Engineer
+    team: Platform
+  - name: Ana Petrova
+    role: Engineer
+    team: Platform
+  - name: Marcus Webb
+    role: Engineer
+    team: Platform
+  - name: Sofia Torres
+    role: Engineering Manager
+    team: Platform
+  - name: Jon Baptiste
+    role: Engineer
+    team: Platform
+  - name: Grace Kim
+    role: Product Manager
+    team: Product
+  - name: Omar Siddiqui
+    role: Senior Engineer
+    team: Product
+  - name: Leila Haddad
+    role: Engineer
+    team: Product
+  - name: Tom Reyes
+    role: Product Designer
+    team: Product
+  - name: Nadia Ibrahim
+    role: Engineer
+    team: Product
+  - name: Victor Nguyen
+    role: Engineering Manager
+    team: Product
+  - name: Ravi Shah
+    role: Engineer
+    team: Product

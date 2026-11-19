@@ -11,6 +11,8 @@ class Settings(BaseSettings):
     trace_dir: Path = Path("traces")
     default_max_tokens: int = 200_000
     default_max_calls: int = 60
+    openai_api_key: str | None = None
+    openai_model: str = "gpt-4o-mini"
 
 
 @lru_cache
